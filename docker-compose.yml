@@ -1,0 +1,16 @@
+version: '3.8'
+services:
+  postgres:
+    image: postgres:17
+    container_name: db-coursework
+    environment:
+      POSTGRES_DB: coursework
+      POSTGRES_USER: coursework
+      POSTGRES_PASSWORD: coursework
+    ports:
+      - "5434:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
